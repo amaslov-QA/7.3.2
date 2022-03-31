@@ -1,0 +1,23 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "one test in playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaslov-QA/7.3.2.git"
+  },
+  "author": "aamaslov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amaslov-QA/7.3.2/issues"
+  },
+  "homepage": "https://github.com/amaslov-QA/7.3.2#readme",
+  "devDependencies": {
+    "playwright": "^1.20.1",
+    "prettier": "^2.6.1"
+  }
+}
