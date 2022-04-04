@@ -12,14 +12,14 @@ const authorization = require("./user2");
   await page.pause();
   await page.locator("text=Войти").click();
   await page.locator('[placeholder="Email"]').click();
-  await page.locator('[placeholder="Email"]').fill(user2.email);
+  await page.locator('[placeholder="Email"]').fill(user2.invalidemail);
   await page.locator('[placeholder="Email"]').press("Tab");
-  await page.locator('[placeholder="Пароль"]').fill(user2.password);
-  await Promise.all([
-    page.waitForNavigation(/*{ url: 'https://netology.ru/profile' }*/),
-    page.locator('[data-testid="login-submit-btn"]').click(),
-  ]);
-  await page.locator("text=Мои курсы и Професии");
+  await page.locator('[placeholder="Пароль"]').fill(user2.invalidpassword);
+  //await Promise.all([
+   // page.waitForNavigation(/*{ url: 'https://netology.ru/profile' }*/),
+   // page.locator('[data-testid="login-submit-btn"]').click(),
+  //]);
+  await page.locator('[data-testid="login-error-hint"]')
   await page.screenshot({ path: "example.png" });
 
   await context.close();
